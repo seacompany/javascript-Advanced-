@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Hamburger</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+    <div id="calculator">
+        <label> Размер гамбургера:
+            <select id="size">
+                <option value="small">Маленький</option>
+                <option value="big">Большой</option>
+            </select>
+        </label>
+        <label> Начинка:
+            <select id="sauce">
+                <option value="cheese" checked >Сыр</option>
+                <option value="salad">Салат</option>
+                <option value="potatoes">Картофель</option>
+            </select>
+        </label>
+        <label> Посыпать приправой:
+            <input type="checkbox" name="Приправа" id="flavoring"> </label>
+        <label> Добавить майонез:
+            <input type="checkbox" name="Майонез" id="mayo"> </label>
+        <button id="submit">Рассчитать</button>
+        <p id="price"></p>
+        <p id="calories"></p>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+
+</html>
