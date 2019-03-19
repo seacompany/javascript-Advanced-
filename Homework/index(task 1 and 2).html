@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lesson 4. Task 1 and 2</title>
+</head>
+<body>
+
+    <!--1. Дан большой текст, в котором для оформления прямой речи используются одинарные кавычки. Придумать шаблон, который заменяет одинарные кавычки на двойные.-->
+
+    <!--2. Улучшить шаблон так, чтобы в конструкциях типа aren't одинарная кавычка не заменялась на двойную.-->
+
+    <script>
+        
+    'use strict';
+    const str = "to be or not to be, (aren't это относится ко второму заданию) 'what' is the question";
+    let regexp1 = str.replace(/\s\'/gm, ' "');
+    let regexp2 = regexp1.replace(/\'\s/gm, '" ');
+    console.log(regexp2);
+    
+    </script>
+
+
+</body>
+</html>
