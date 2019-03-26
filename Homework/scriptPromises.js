@@ -9,18 +9,39 @@ Vue.component('goods-list', {
         :good="good"></goods-item>
       </div>
     `
-  });
-  
+});
+
 
 Vue.component('goods-item', {
     props: ['good'],
     template: `
-    <div class="goods-item">
-        <h3>{{good.title}}</h3>
-        <p class='desc-text'>{{good.description}}</p>
-        <p class='price-text'>{{good.price}} $</p>
-        <button class='buy-good'>Купить</button>
-    </div>
+        <div class="goods-item">
+            <h3>{{good.title}}</h3>
+            <p class='desc-text'>{{good.description}}</p>
+            <p class='price-text'>{{good.price}} $</p>
+            <button class='buy-good'>Купить</button>
+        </div>
+    `
+});
+
+Vue.component('search', {
+    props: ['searchLine'],
+    template: `
+        <div class="search">
+            <form @submit.prevent="filterGoods">
+                <input type="text" class="goods-search" v-model='searchLine'>
+                <button class="search-button" type="submit">Искать</button>
+            </form>
+        </div>
+    `
+});
+
+Vue.component('cart',{
+    props: ['isVisibleCart'],
+    template: `
+        <div class="cart" v-if='isVisibleCart'>
+            <button class='cart-button'>Корзина</button>
+        </div>
     `
 });
 

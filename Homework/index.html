@@ -13,20 +13,16 @@
 <body>
     <div id="app">
         <header>
-            <div class="search">
-                <form @submit.prevent="filterGoods">
-                    <input type="text" class="goods-search" v-model='searchLine'>
-                    <button class="search-button" type="submit">Искать</button>
-                </form>
-            </div>
-
-            <div class="cart" v-if='isVisibleCart'>
-                <button class='cart-button'>Корзина</button>
-            </div>
+            <search :searchLine="searchLine"></search>
+            <cart :isVisibleCart='true'></cart>
         </header>
 
+
+
         <main>
-           <goods-list :goods="filteredGoods"></goods-list>
+            <div v-if='filteredGoods.length === 0'>Нет данных</div>
+            <goods-list :goods="filteredGoods"></goods-list>
+
         </main>
     </div>
 
